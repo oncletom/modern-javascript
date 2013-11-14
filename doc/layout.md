@@ -1,6 +1,6 @@
 # Repository Layout
 
-This repository layout is suitable for *frontend projects*, *backend projects* and any other kind of applications such as *command line programs*
+This repository layout is suitable for *frontend projects*, *backend projects* and any other kind of applications such as *command line programs* and *Web based mobile applications*.
 
 ```
 .
@@ -31,7 +31,6 @@ The project root contains the *essential files* of the project, which means:
 - entry points/main files
 
 ```bash
-$ ls -l . | grep ^- | awk '{print $9}'
 LICENSE
 README.md
 package.json
@@ -42,7 +41,6 @@ package.json
 This folder contains **executable files**. Every file is assumed to be a system executable.
 
 ```bash
-$ ls -l ./bin | grep ^- | awk '{print $9}'
 deploy.bat
 deploy.sh
 server.js
@@ -55,7 +53,6 @@ This folder contains **configuration files** such as database credentials, envir
 Make sure no sensible information is committed in the wild, or appears in your versioning history.
 
 ```bash
-$ ls -l ./config | grep ^- | awk '{print $9}'
 database.yml
 development.json
 production.json
@@ -69,7 +66,6 @@ This folder contains **processed files for production use**. They are typically 
 *Notice*: some package systems (like [`bower`](http://bower.io/)) requires those files to be available in the versioning system. This is a workaround to avoid people installing the module to run the processing on their own.
 
 ```bash
-$ ls -l ./dist | grep ^- | awk '{print $9}'
 index.html
 main.min.js
 ```

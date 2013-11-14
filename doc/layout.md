@@ -48,6 +48,10 @@ server.js
 
 ## `/config`
 
+This folder contains **configuration files** such as database credentials, environment related values, default values etc.
+
+Make sure no sensible information is committed in the wild, or appears in your versioning history.
+
 ```bash
 $ ls -l ./config | grep ^- | awk '{print $9}'
 database.yml
@@ -58,6 +62,10 @@ staging.json
 
 ## `/dist`
 
+This folder contains **processed files for production use**. They are typically outputted by processing tasks and are usually not versioned.
+
+*Notice*: some package systems (like [`bower`](http://bower.io/)) requires those files to be available in the versioning system. This is a workaround to avoid people installing the module to run the processing on their own.
+
 ```bash
 $ ls -l ./dist | grep ^- | awk '{print $9}'
 index.html
@@ -66,21 +74,19 @@ main.min.js
 
 ## `/doc`
 
-This folder contains the project **documentation**.
+This folder contains the project **documentation files**.
+
+They are usually written in a text format (like [Markdown](http://daringfireball.net/projects/markdown/) or [reStructuredText](http://docutils.sourceforge.net/rst.html)).
 
 ## `/lib`
 
 This folder contains the project **libraries and reusable components**.
 
-
 ## `/src`
 
 This folder contains the **project source files**.
 
-```bash
-$ ls -1 ./src
-
-```
+This is where lies the business logic of your application, and where you glue the different vendors and libraries.
 
 ## `/test`
 
